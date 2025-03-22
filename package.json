@@ -1,0 +1,19 @@
+{
+  "name": "uno-mcp",
+  "version": "1.0.0",
+  "description": "Unified Narrative Operator - MCP Server for enhancing story text",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node dist/index.js",
+    "dev": "tsc -w & node --watch dist/index.js"
+  },
+  "keywords": ["mcp", "narrative", "text", "enhancement"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "@types/node": "^22.13.11",
+    "typescript": "^5.8.2"
+  }
+}

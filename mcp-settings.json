@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "uno": {
+      "command": "node",
+      "args": ["D:/TOOLS/UNO-MCP/uno-mcp/dist/index.js"],
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
