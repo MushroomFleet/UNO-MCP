@@ -1,4 +1,6 @@
 # 🪄 UNO: Unified Narrative Operator
+[![smithery badge](https://smithery.ai/badge/@MushroomFleet/uno-mcp)](https://smithery.ai/server/@MushroomFleet/uno-mcp)
+
 
 ## ✨ Overview
 
@@ -71,6 +73,14 @@ Reduces unintentional repetition while preserving style:
 - Distinguishes between intentional and unintentional repetition
 
 ## 📋 Installation
+
+### Installing via Smithery
+
+To install Unified Narrative Operator for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@MushroomFleet/uno-mcp):
+
+```bash
+npx -y @smithery/cli install @MushroomFleet/uno-mcp --client claude
+```
 
 ### Prerequisites
 - Node.js (v14 or higher)
