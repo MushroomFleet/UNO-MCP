@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-import { Server } from '@modelcontextprotocol/sdk/server/index';
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio';
+import { Server } from '@modelcontextprotocol/sdk/server/index.js';
+import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import {
   CallToolRequestSchema,
   ErrorCode,
   McpError,
   ListToolsRequestSchema,
-} from '@modelcontextprotocol/sdk/types';
+} from '@modelcontextprotocol/sdk/types.js';
 
-import { TextAnalyzer } from './analyzer';
-import { EnhancementProcessor } from './enhancer';
+import { TextAnalyzer } from './analyzer.js';
+import { EnhancementProcessor } from './enhancer.js';
 
 // Define the input schema for our tools
 const textInputSchema = {
@@ -106,15 +106,15 @@ class UnoServer {
     this.setupToolHandlers();
     
     // Error handling
-    this.server.onerror = (error) => console.error('[UNO MCP Error]', error);
-    process.on('SIGINT', async () => {
+    this.server.onerror = (error: any) => console.error('[UNO MCP Error]', error);
+    process.on('SIGINT', async (): Promise<void> => {
       await this.server.close();
       process.exit(0);
     });
   }
 
   private setupToolHandlers() {
-    this.server.setRequestHandler(ListToolsRequestSchema, async () => ({
+    this.server.setRequestHandler(ListToolsRequestSchema, async (): Promise<any> => ({
       tools: [
         {
           name: 'analyze_text',
@@ -134,7 +134,7 @@ class UnoServer {
       ],
     }));
 
-    this.server.setRequestHandler(CallToolRequestSchema, async (request) => {
+    this.server.setRequestHandler(CallToolRequestSchema, async (request: any): Promise<any> => {
       try {
         switch (request.params.name) {
           case 'analyze_text':

@@ -1,4 +1,4 @@
-import { TextAnalyzer } from './analyzer';
+import { TextAnalyzer } from './analyzer.js';
 
 /**
  * Interface for enhancement options

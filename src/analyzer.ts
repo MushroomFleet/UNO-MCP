@@ -402,7 +402,7 @@ export class TextAnalyzer {
     const words = text.toLowerCase().match(/\b\w+\b/g) || [];
     const wordFrequency: {[key: string]: number} = {};
     
-    words.forEach(word => {
+    words.forEach((word: string): void => {
       if (word.length > 3) { // Only consider words longer than 3 letters
         wordFrequency[word] = (wordFrequency[word] || 0) + 1;
       }
@@ -487,7 +487,7 @@ export class TextAnalyzer {
     const patterns: {[key: string]: number} = {};
     
     // Create a simplified pattern for each sentence
-    sentences.forEach(sentence => {
+    sentences.forEach((sentence: string): void => {
       // Simplified pattern: first word + sentence length category
       const firstWord = sentence.trim().split(/\s+/)[0].toLowerCase();
       const lengthCategory = sentence.split(/\s+/).length < 8 ? "short" : 
