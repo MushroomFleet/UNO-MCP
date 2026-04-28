@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/mushroomfleet-uno-mcp-badge.png)](https://mseep.ai/app/mushroomfleet-uno-mcp)
+
 # 🪄 UNO: Unified Narrative Operator
 [![smithery badge](https://smithery.ai/badge/@MushroomFleet/uno-mcp)](https://smithery.ai/server/@MushroomFleet/uno-mcp)
 
